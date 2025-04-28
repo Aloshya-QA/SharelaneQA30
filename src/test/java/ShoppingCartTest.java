@@ -13,7 +13,7 @@ public class ShoppingCartTest {
     @Test
     public void checkDiscount0() {
         ChromeOptions options = new ChromeOptions();    //флаг для запуска браузера бег графического интерфейса
-        options.addArguments("--headless=new");         //фиксит попап о смене пароля
+        options.addArguments("--headless=new");         //фиксит попап о смене пароля (upd* - не помогает)
         SoftAssert softAssert = new SoftAssert();
         WebDriver driver = new ChromeDriver(options);
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
@@ -51,15 +51,15 @@ public class ShoppingCartTest {
         softAssert.assertEquals(discountPercent, "0");
         softAssert.assertEquals(discount$, "0");
         softAssert.assertEquals(total$, "190");
-        softAssert.assertAll();
 
         driver.quit();
+        softAssert.assertAll();
     }
 
     @Test
     public void checkDiscount2() {
-        ChromeOptions options = new ChromeOptions();    //флаг для запуска браузера бег графического интерфейса
-        options.addArguments("--headless=new");         //фиксит попап о смене пароля
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--headless=new");
         SoftAssert softAssert = new SoftAssert();
         WebDriver driver = new ChromeDriver(options);
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
@@ -97,15 +97,15 @@ public class ShoppingCartTest {
         softAssert.assertEquals(discountPercent, "2");
         softAssert.assertEquals(discount$, "4");
         softAssert.assertEquals(total$, "196");
-        softAssert.assertAll();
 
         driver.quit();
+        softAssert.assertAll();
     }
 
     @Test
     public void checkDiscount3() {
-        ChromeOptions options = new ChromeOptions();    //флаг для запуска браузера бег графического интерфейса
-        options.addArguments("--headless=new");         //фиксит попап о смене пароля
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--headless=new");
         SoftAssert softAssert = new SoftAssert();
         WebDriver driver = new ChromeDriver(options);
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
@@ -143,15 +143,15 @@ public class ShoppingCartTest {
         softAssert.assertEquals(discountPercent, "3");
         softAssert.assertEquals(discount$, "15");
         softAssert.assertEquals(total$, "485");
-        softAssert.assertAll();
 
         driver.quit();
+        softAssert.assertAll();
     }
 
     @Test
     public void checkDiscount4() {
-        ChromeOptions options = new ChromeOptions();    //флаг для запуска браузера бег графического интерфейса
-        options.addArguments("--headless=new");         //фиксит попап о смене пароля
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--headless=new");
         SoftAssert softAssert = new SoftAssert();
         WebDriver driver = new ChromeDriver(options);
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
@@ -189,8 +189,8 @@ public class ShoppingCartTest {
         softAssert.assertEquals(discountPercent, "4");
         softAssert.assertEquals(discount$, "40");
         softAssert.assertEquals(total$, "960");
-        softAssert.assertAll();
 
         driver.quit();
+        softAssert.assertAll();
     }
 }
