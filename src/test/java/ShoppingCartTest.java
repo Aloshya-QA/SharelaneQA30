@@ -12,8 +12,8 @@ import java.time.Duration;
 public class ShoppingCartTest {
     @Test
     public void checkDiscount0() {
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless=new");  //флаг для запуска браузера бег графического интерфейса)))
+        ChromeOptions options = new ChromeOptions();    //флаг для запуска браузера бег графического интерфейса
+        options.addArguments("--headless=new");         //фиксит попап о смене пароля
         SoftAssert softAssert = new SoftAssert();
         WebDriver driver = new ChromeDriver(options);
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
